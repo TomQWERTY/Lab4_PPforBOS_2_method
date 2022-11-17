@@ -21,7 +21,7 @@ RV NO_IMPLICIT_LOOPS
 RV MAX_TASK_ENTRIES=2
 RV MAX_TASKS=1+
 
-U arrman%b		arrman.adb		1dce42c1 NE OO SU IL
+U arrman%b		arrman.adb		83b8b89d NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -49,7 +49,7 @@ D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D arrman.adb		20221117090242 b33a97ac arrman%b
+D arrman.adb		20221117094350 2d4c6df0 arrman%b
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-c.ads		20210520051132 d9beded9 interfaces.c%s
 D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
@@ -93,42 +93,38 @@ X 1 ada.ads
 16K9*Ada 20e8 13|1r6 2r5
 X 11 a-textio.ads
 58K13*Text_IO 725e16 13|1w10 2r9
-506U14*Put_Line 13|67s4 81s4 91s4
+506U14*Put_Line 13|59s4 72s4
 X 13 arrman.adb
-4U11*arrman 4b11 93l5 93t11
-6i4 array_size{integer} 7r30 9r33 70r22 71r21 84r20 85r26 88m7 88r21 88r38
-. 89r17
-7i4 thread_count{integer} 54r21 56r25 70r35 71r34
-9A9 my_array(integer)<integer> 11r8
-11a4 a{9A9} 19r26 27r16 28m10 63r13 64r24 86m10 86r18 86r25 91r54
-13V13 part_sum{integer} 13b13 13>23 13>39 23l8 23t16 48s14
-13i23 left{integer} 17r12
-13i39 Right{integer} 18r18
-14i7 sum{integer} 19m13 19r20 22r14
-15i7 i{integer} 17m7 18r13 19r29 20m10 20r15
-25U14 create_array 25b14 30l8 30t20 61s4
-27i11 i{integer} 28r13 28r19
-32T14 my_task 35l8 35e15 39b14 45m10 46m10 52l8 52t15 54r38
-33Y13 start 33>19 33>25 44b14 47l11 47t16 70s16
-33i19 left{integer} 45r26
-33i25 RigHt{integer} 46r27
-34Y13 finish 34<20 49b14 51l11 51t17 74s16
-34i20 sum1{integer} 50m10 50r10
-40i7 left{integer} 45m18 48r24
-40i13 RigHt{integer} 46m18 48r30
-41i7 sum{integer} 48m7 50r18
-44i20 left{integer}
-44i26 RigHt{integer}
-49i22 sum1{integer}
-54a4 task1(32T14) 69r13 70r7 73r13 74r7
-56a4 part_sums(integer) 75m7 78r13 79r24
-58i4 sum00{integer} 62m4 64m7 64r16 67r40 74m23 75r23 77m4 79m7 79r16 81r39
-59i4 second_index{integer} 85m10 86r27
-63i8 i{integer} 64r26
-69i8 i{integer} 70r13 70r51 71r49
-73i8 i{integer} 74r13 75r17
-78i8 i{integer} 79r34
-84i11 i{integer} 85r39 86r12 86r20
+4U11*arrman 4b11 74l5 74t11
+6i4 array_size{integer} 8r33 48r30 61r10 63r33 63r57 68m7 68r21 68r38 69r23
+8A9 my_array(integer)<integer> 10r8
+10a4 a{8A9} 14r16 15m10 55r13 56r24 63r25 63r31 66m26 66r26 72r39
+12U14 create_array 12b14 17l8 17t20 53s4
+14i11 i{integer} 15r13 15r19
+19T14 my_task 22l8 22e15 26b14 35m13 36m13 37m13 38m13 46l8 46t15 49r38
+20Y13 start 20>19 20>25 20>32 20>39 34b17 39l14 39t19 63s19
+20i19 left{integer} 35r29
+20i25 RigHt{integer} 36r30
+20i32 index{integer} 37r30
+20i39 s{integer} 38r26
+21Y13 finish 21<20 41b17 43l14 43t20 66s19
+21i20 sum1{integer} 42m13 42r13
+27i7 left{integer} 35m21 40r17
+27i13 RigHt{integer} 36m21 40r24
+28i7 sum{integer} 40m10 42r21
+29i7 index{integer} 37m21 44r20
+30i7 s{integer} 38m21 44r29 44r37
+34i23 left{integer}
+34i29 RigHt{integer}
+34i36 index{integer}
+34i43 s{integer}
+41i25 sum1{integer}
+48i4 thread_count{integer} 49r21 62r19 65r19 69m7
+49a4 task1(19T14) 63r10 66r10
+51i4 sum00{integer} 54m4 56m7 56r16 59r40
+55i8 i{integer} 56r26
+62i11 i{integer} 63r16 63r27 63r46 63r54
+65i11 i{integer} 66r16 66r28
 X 34 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
