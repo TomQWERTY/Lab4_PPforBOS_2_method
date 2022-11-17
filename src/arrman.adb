@@ -56,6 +56,7 @@ procedure arrman is
    part_sums : array(1..thread_count) of Integer;
 
    sum00 : integer;
+   second_index : integer;
 begin
    create_array;
    sum00 := 0;
@@ -78,5 +79,15 @@ begin
       sum00 := sum00 + part_sums(i);
    end loop;
    Put_Line("Multi-thread result: " & sum00'img);
+
+   loop
+      for i in 1..(array_size / 2) loop
+         second_index := array_size - i + 1;
+         a(i) := a(i) + a(second_index);
+      end loop;
+      array_size := array_size / 2 + array_size mod 2;
+      exit when array_size <= 1;
+   end loop;
+   Put_Line("Second method single-thread result: " & a(1)'img);
 
 end arrman;
